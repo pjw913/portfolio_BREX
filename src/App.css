@@ -1,38 +1,168 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
 .App {
   text-align: center;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+body, section, div, button, a, ul, li, p, nav{
+  font-family: 'Pretendard', sans-serif;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+header{
+  animation-name: mp; animation-duration: 2s; animation-timing-function: ease-in-out; animation-iteration-count: 1; animation-fill-mode: both;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+.togglediv > nav{
+  background-color: #222; transition: all 0.5s;
+}
+.togglediv > nav > ul > li > .brexlink > span{
+  display: block; position: absolute; background-color: #ccc; left: 90px;
+}
+.togglediv > nav > ul > li > .brexlink:hover > span{
+  animation-name: link; animation-duration: 0.5s; animation-timing-function: ease-in-out; animation-iteration-count: 2; animation-fill-mode: both;
+}
+.togglediv > .snslink > a:nth-child(1) > span{
+  display: block; position: absolute; background-color: #fff; right: 72px;
+}
+.togglediv > .snslink > a:nth-child(2) > span{
+  display: block; position: absolute; background-color: #fff; right: 36px;
+}
+.togglediv > .snslink > a:nth-child(3) > span{
+  display: block; position: absolute; background-color: #fff; right: 0px;
+}
+.togglediv > .snslink > a:nth-child(1):hover > span{
+  animation-name: linkm; animation-duration: 0.5s; animation-timing-function: ease-in-out; animation-iteration-count: 2; animation-fill-mode: both;
+}
+.togglediv > .snslink > a:nth-child(2):hover > span{
+  animation-name: linkm; animation-duration: 0.5s; animation-timing-function: ease-in-out; animation-iteration-count: 2; animation-fill-mode: both;
+}
+.togglediv > .snslink > a:nth-child(3):hover > span{
+  animation-name: linkm; animation-duration: 0.5s; animation-timing-function: ease-in-out; animation-iteration-count: 2; animation-fill-mode: both;
+}
+@keyframes link{
+  0%{width: 0; height: 0;}
+  100%{width: 105px; height: 1px;}
+}
+@keyframes linkm{
+  0%{width: 0; height: 0;}
+  100%{width: 20px; height: 1px;}
 }
 
-.App-link {
-  color: #61dafb;
+div > .mp{
+  animation-name: mp; animation-duration: 2s; animation-timing-function: ease-in-out; animation-iteration-count: 1; animation-fill-mode: both;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+@keyframes mp{
+  0%{opacity: 0;}
+  100%{opacity: 1;}
+}
+
+.flex-wrapper > div{
+  transition: all 2s; overflow: hidden;
+}
+
+.bgimg{
+  transition: all 0.6s;
+}
+.bgimg:hover{
+  transform: scale(1.05); 
+}
+
+.bga{
+  transition: all 0.6s;  top:0px;
+}
+.bgimg:hover ~ div .bga{
+  top: -20px;
+}
+
+footer > div > .ppp > .textlink > a{
+  position: relative;
+}
+footer > div > .ppp > .textlink > a:hover > span{
+  animation-name: linkm; animation-duration: 0.5s; animation-timing-function: ease-in-out; animation-iteration-count: 2; animation-fill-mode: both;
+}
+
+footer > div > .ppp > .textlink > a:nth-child(1) > span{
+  display: block; position: absolute; background-color: #ccc; left: 0px;
+}
+footer > div > .ppp > .textlink > a:nth-child(2) > span{
+  display: block; position: absolute; background-color: #ccc; left: 0px;
+}
+footer > div > .ppp > .textlink > a:nth-child(3) > span{
+  display: block; position: absolute; background-color: #ccc; left: 0px;
+}
+footer > .copyright{
+  border-top: 1px solid #ccc; display: flex;
+}
+
+footer > div > .project > p > a{
+  position: relative;
+}
+footer > div > .project > p > a > span{
+  display: block; position: absolute; background-color: #ccc; left: 0px;
+}
+footer > div > .project > p > a:hover > span{
+  animation-name: lineff; animation-duration: 0.5s; animation-timing-function: ease-in-out; animation-iteration-count: 2; animation-fill-mode: both;
+}
+
+footer > div > .companytt > p > a{
+  position: relative;
+}
+footer > div > .companytt > p > a > span{
+  display: block; position: absolute; background-color: #ccc; left: 0px;
+}
+footer > div > .companytt > p > a:hover > span{
+  animation-name: linef; animation-duration: 0.5s; animation-timing-function: ease-in-out; animation-iteration-count: 2; animation-fill-mode: both;
+}
+
+footer > .sitelink > p > a{
+  position: relative;
+}
+footer > .sitelink > p > a > span{
+  display: block; position: absolute; background-color: #ccc; left: 0px; bottom: 0px;
+}
+footer > .sitelink > p > a:hover > span{
+  animation-name: link; animation-duration: 0.5s; animation-timing-function: ease-in-out; animation-iteration-count: 2; animation-fill-mode: both;
+}
+
+@keyframes lineff{
+  0%{width: 0; height: 0;}
+  100%{width: 90px; height: 1px;}
+}
+@keyframes linef{
+  0%{width: 0; height: 0;}
+  100%{width: 82px; height: 1px;}
+}
+
+.animation{
+  animation-name: toggle; animation-duration: 0.2s; animation-timing-function: ease-in; animation-iteration-count: 1; animation-fill-mode: backwards;
+}
+@keyframes toggle{
+  0%{right:-20%; opacity: 0;}
+  100%{right:0; opacity: 1;}
+}
+
+.none{
+  color: #777;
+}
+
+.main > .main-p > a:nth-child(1) > span{
+  display: block; position: absolute; background-color: #fff; right: 76px;
+}
+.main > .main-p > a:nth-child(2) > span{
+  display: block; position: absolute; background-color: #fff; right: 36px;
+}
+.main > .main-p > a:nth-child(3) > span{
+  display: block; position: absolute; background-color: #fff; right: 0px;
+}
+.main > .main-p > a:nth-child(1):hover > span{
+  animation-name: linkm; animation-duration: 0.5s; animation-timing-function: ease-in-out; animation-iteration-count: 2; animation-fill-mode: both;
+}
+.main > .main-p > a:nth-child(2):hover > span{
+  animation-name: linkm; animation-duration: 0.5s; animation-timing-function: ease-in-out; animation-iteration-count: 2; animation-fill-mode: both;
+}
+.main > .main-p > a:nth-child(3):hover > span{
+  animation-name: linkm; animation-duration: 0.5s; animation-timing-function: ease-in-out; animation-iteration-count: 2; animation-fill-mode: both;
 }
