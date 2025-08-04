@@ -1,0 +1,15 @@
+{
+  "files": {
+    "main.css": "/portfolio_BREX/static/css/main.07b3f834.css",
+    "main.js": "/portfolio_BREX/static/js/main.cd6ae641.js",
+    "static/js/453.bb257cf5.chunk.js": "/portfolio_BREX/static/js/453.bb257cf5.chunk.js",
+    "index.html": "/portfolio_BREX/index.html",
+    "main.07b3f834.css.map": "/portfolio_BREX/static/css/main.07b3f834.css.map",
+    "main.cd6ae641.js.map": "/portfolio_BREX/static/js/main.cd6ae641.js.map",
+    "453.bb257cf5.chunk.js.map": "/portfolio_BREX/static/js/453.bb257cf5.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.07b3f834.css",
+    "static/js/main.cd6ae641.js"
+  ]
+}
